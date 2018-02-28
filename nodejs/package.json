@@ -1,0 +1,17 @@
+{
+  "name": "realtime-leadgen-node-demo",
+  "version": "1.0.0",
+  "description": "A Node.js demo for retrieving realtime leads from Facebook lead ads",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "node-fetch": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Supasate Ping Choochaisri",
+  "license": "MIT"
+}
