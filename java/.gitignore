@@ -1,0 +1,5 @@
+build/*
+access_token.txt
+*.swp
+.gradle
+.m2

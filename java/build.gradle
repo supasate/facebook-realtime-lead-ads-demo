@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'LeadGenWebhook'
+
+dependencies {
+    compile 'io.javalin:javalin:1.3.0'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile 'org.json:json:20180130'
+}
+
+repositories {
+    jcenter()
+}
