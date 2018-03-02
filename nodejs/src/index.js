@@ -21,7 +21,7 @@ app.get('/leadgen', (req, res) => {
     res.send({success: false, reason: 'Empty request params'});
     return;
   }
-
+  // Extract a verify token we set in the webhook subscription and a challenge to echo back.
   const verifyToken = req.query['hub.verify_token'];
   const challenge = req.query['hub.challenge'];
 
@@ -37,7 +37,7 @@ app.get('/leadgen', (req, res) => {
     res.send({success: false, reason: 'Verify token does not match'});
     return;
   }
-
+  // We echo the received challenge back to Facebook to finish the verification process.
   res.send(challenge);
 });
 

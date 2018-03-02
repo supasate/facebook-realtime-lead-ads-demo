@@ -23,6 +23,7 @@ public class LeadGenWebhook {
               ctx.result("Missing hub.verify_token and hub.challenge params");
               return;
             }
+            // Extract a verify token we set in the webhook subscription and a challenge to echo back.
             String verifyToken = ctx.queryParam("hub.verify_token");
             String challenge = ctx.queryParam("hub.challenge");
 
@@ -30,7 +31,7 @@ public class LeadGenWebhook {
                 ctx.result("Verify token does not match");
                 return;
             }
-
+            // We echo the received challenge back to Facebook to finish the verification process.
             ctx.result(challenge);
         });
 

@@ -4,12 +4,12 @@
 /////////////////////////////////////////////////////////////////////////
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   // A token that Facebook will echo back to you as part of callback URL verification.
-  $VERIFY_TOKEN = "YOUR_SECURE_VERIFY_TOKEN";
-
+  $VERIFY_TOKEN = 'YOUR_SECURE_VERIFY_TOKEN';
+  // Extract a verify token we set in the webhook subscription and a challenge to echo back.
   $verify_token = $_GET['hub_verify_token'];
   $challenge = $_GET['hub_challenge'];
 
-  if (!$verify_token || !challenge) {
+  if (!$verify_token || !$challenge) {
     echo 'Missing hub.verify_token and hub.challenge params';
     exit();
   }
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     echo 'Verify token does not match';
     exit();
   }
-
+  // We echo the received challenge back to Facebook to finish the verification process.
   echo $challenge;
 }
 
