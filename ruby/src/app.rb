@@ -77,5 +77,6 @@ post '/leadgen' do
       }
     }
   }
+  # Send HTTP 200 OK status to indicate we've received the update.
   return 200
 end

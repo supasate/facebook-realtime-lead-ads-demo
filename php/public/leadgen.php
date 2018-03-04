@@ -74,5 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       }
     }
   }
+  // Send HTTP 200 OK status to indicate we've received the update.
   http_response_code(200);
 }

@@ -98,6 +98,7 @@ app.post('/leadgen', (req, res) => {
         });
     });
   });
+  // Send HTTP 200 OK status to indicate we've received the update.
   res.sendStatus(200);
 });
 

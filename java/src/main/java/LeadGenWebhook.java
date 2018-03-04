@@ -95,6 +95,7 @@ public class LeadGenWebhook {
                     }
                 }
             }
+            // Send HTTP 200 OK status to indicate we've received the update.
             ctx.status(200);
         });
     }

@@ -86,6 +86,7 @@ def leadgen():
                     print('Question ', question)
                     print('Answers ', ','.join(answers))
 
+        # Send HTTP 200 OK status to indicate we've received the update.
         return make_response(jsonify(success=True), 200)
 
 
