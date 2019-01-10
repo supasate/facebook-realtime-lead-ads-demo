@@ -23,7 +23,7 @@ To make our demo applications can run as stand alone applications without additi
 6. Assign your page to the system user as `Page Admin`. (in Business Manager -> Business Settings -> System Users -> Assign Assets)
 7. Assign the system user to your facebook app as developer (in App dashboard -> Roles).
 8. Subscribe your App to your Page by [calling Graph API](https://developers.facebook.com/docs/graph-api/reference/page/subscribed_apps) (Note: you can use [Graph API Explorer](https://developers.facebook.com/tools/explorer/). Select your App and get page access token for your page and make a POST request to `/<your_page_id>/subscribed_apps`)
-9. Generate system user access token with `manage_pages` permission. (in Business Manager -> Business Settings -> System Users -> Generate New Token)
+9. Generate system user access token with `manage_pages` and `leads_retrieval` permission. (in Business Manager -> Business Settings -> System Users -> Generate New Token)
 
 ## Note
 
